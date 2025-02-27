@@ -2,6 +2,10 @@
 
 This repository contains instructions and scripts to compare student submissions for plagiarism.
 
+TODO:
+
+- [ ] filter to get only latest commit before deadline
+
 ## Prerequisites
 
 ### Python and Miniconda
@@ -44,8 +48,19 @@ Check your assignment in GitHub Classroom, click "Download", select "Student Rep
 This command searches for plagiarism in the `<directory>`, for `cpp` extensions, and for files with the same name.
 
 ```shell
-copydetect -t <directory> -e cpp -s
+copydetect -t <directory> -e cpp -s -b <template directory>
 ```
 
-TODO: add `-b` with boilerplate code
-TODO: filter to get only latest commit before deadline
+## Courses
+
+### ENGR 103 Winter 2025
+
+Boilerplate Code / Templates (skipping assignments 1 and 2 because they were very simple):
+
+- `gh repo clone adulbrich/engr103-financial-planner`
+- `gh repo clone adulbrich/engr103-dictionary`
+- `gh repo clone adulbrich/engr103-calculator`
+
+### CS 362 Spring 2025
+
+TBD
